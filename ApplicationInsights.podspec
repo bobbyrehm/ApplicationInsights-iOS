@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
   s.frameworks      = 'CoreTelephony', 'UIKit', 'Foundation', 'SystemConfiguration', 'Security'
   s.libraries       = 'z'
 
-  s.preserve_path   = 'ApplicationInsights/README.md'
+  s.preserve_path   = 'README.md'
 end
