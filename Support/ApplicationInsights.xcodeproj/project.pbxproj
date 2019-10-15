@@ -429,7 +429,7 @@
 		80E1A4561AE54C8500603B0A /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
 		80E1A4571AE54C8500603B0A /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
 		80F334B11A9C93290098026F /* MSAIApplicationInsightsPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAIApplicationInsightsPrivate.h; sourceTree = "<group>"; };
-		96BEBBB323567F8F006C31CE /* ApplicationInsights_Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApplicationInsights_Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BEBBB323567F8F006C31CE /* ApplicationInsights.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApplicationInsights.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BEBBB523567F8F006C31CE /* ApplicationInsights_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationInsights_Framework.h; sourceTree = "<group>"; };
 		96BEBBB623567F8F006C31CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96BEBC1F235681B0006C31CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -712,7 +712,7 @@
 			children = (
 				1E5954F215B6F24A00A03429 /* libApplicationInsights.a */,
 				1E5A459016F0DFC200B55C04 /* ApplicationInsightsTests.xctest */,
-				96BEBBB323567F8F006C31CE /* ApplicationInsights_Framework.framework */,
+				96BEBBB323567F8F006C31CE /* ApplicationInsights.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -930,9 +930,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1E5954CB15B6F24A00A03429 /* ApplicationInsights */ = {
+		1E5954CB15B6F24A00A03429 /* ApplicationInsights-Library */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E5954EF15B6F24A00A03429 /* Build configuration list for PBXNativeTarget "ApplicationInsights" */;
+			buildConfigurationList = 1E5954EF15B6F24A00A03429 /* Build configuration list for PBXNativeTarget "ApplicationInsights-Library" */;
 			buildPhases = (
 				1E5954CC15B6F24A00A03429 /* Sources */,
 				1E5954DB15B6F24A00A03429 /* Frameworks */,
@@ -942,7 +942,7 @@
 			);
 			dependencies = (
 			);
-			name = ApplicationInsights;
+			name = "ApplicationInsights-Library";
 			productName = ApplicationInsights;
 			productReference = 1E5954F215B6F24A00A03429 /* libApplicationInsights.a */;
 			productType = "com.apple.product-type.library.static";
@@ -965,9 +965,9 @@
 			productReference = 1E5A459016F0DFC200B55C04 /* ApplicationInsightsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		96BEBBB223567F8F006C31CE /* ApplicationInsights Framework */ = {
+		96BEBBB223567F8F006C31CE /* ApplicationInsights */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96BEBBB823567F8F006C31CE /* Build configuration list for PBXNativeTarget "ApplicationInsights Framework" */;
+			buildConfigurationList = 96BEBBB823567F8F006C31CE /* Build configuration list for PBXNativeTarget "ApplicationInsights" */;
 			buildPhases = (
 				96BEBBAE23567F8F006C31CE /* Headers */,
 				96BEBBAF23567F8F006C31CE /* Sources */,
@@ -978,9 +978,9 @@
 			);
 			dependencies = (
 			);
-			name = "ApplicationInsights Framework";
+			name = ApplicationInsights;
 			productName = "ApplicationInsights Framework";
-			productReference = 96BEBBB323567F8F006C31CE /* ApplicationInsights_Framework.framework */;
+			productReference = 96BEBBB323567F8F006C31CE /* ApplicationInsights.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1010,10 +1010,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1E5954CB15B6F24A00A03429 /* ApplicationInsights */,
+				96BEBBB223567F8F006C31CE /* ApplicationInsights */,
+				1E5954CB15B6F24A00A03429 /* ApplicationInsights-Library */,
 				1E8E66AD15BC3D7700632A2E /* ApplicationInsights Documentation */,
 				1E5A458F16F0DFC200B55C04 /* ApplicationInsights Tests */,
-				96BEBBB223567F8F006C31CE /* ApplicationInsights Framework */,
 			);
 		};
 /* End PBXProject section */
@@ -1190,7 +1190,7 @@
 /* Begin PBXTargetDependency section */
 		1EA116FF16F4D302001C015C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1E5954CB15B6F24A00A03429 /* ApplicationInsights */;
+			target = 1E5954CB15B6F24A00A03429 /* ApplicationInsights-Library */;
 			targetProxy = 1EA116FE16F4D302001C015C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1209,6 +1209,21 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_THUMB_SUPPORT = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Foundation,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+					"-framework",
+					UIKit,
+					"-framework",
+					CoreTelephony,
+					"-lz",
+					"-lc++",
+				);
 				PRODUCT_NAME = ApplicationInsights;
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
 				SKIP_INSTALL = YES;
@@ -1233,6 +1248,21 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_THUMB_SUPPORT = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Foundation,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+					"-framework",
+					UIKit,
+					"-framework",
+					CoreTelephony,
+					"-lz",
+					"-lc++",
+				);
 				PRODUCT_NAME = ApplicationInsights;
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
 				SKIP_INSTALL = YES;
@@ -1398,6 +1428,21 @@
 				MARKETING_VERSION = "1.0-beta.9";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Foundation,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+					"-framework",
+					UIKit,
+					"-framework",
+					CoreTelephony,
+					"-lz",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jpjventures.ApplicationInsights-Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1444,6 +1489,21 @@
 				MARKETING_VERSION = "1.0-beta.9";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Foundation,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+					"-framework",
+					UIKit,
+					"-framework",
+					CoreTelephony,
+					"-lz",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jpjventures.ApplicationInsights-Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1458,7 +1518,6 @@
 		E400563C148D79B500EB22B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1515,7 +1574,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B2B6E891C5B039800D89D13 /* release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1566,7 +1624,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E5954EF15B6F24A00A03429 /* Build configuration list for PBXNativeTarget "ApplicationInsights" */ = {
+		1E5954EF15B6F24A00A03429 /* Build configuration list for PBXNativeTarget "ApplicationInsights-Library" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E5954F015B6F24A00A03429 /* Debug */,
@@ -1593,7 +1651,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96BEBBB823567F8F006C31CE /* Build configuration list for PBXNativeTarget "ApplicationInsights Framework" */ = {
+		96BEBBB823567F8F006C31CE /* Build configuration list for PBXNativeTarget "ApplicationInsights" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96BEBBB923567F8F006C31CE /* Debug */,
