@@ -12,18 +12,6 @@ static NSString *const kMSAIUtcDateFormatter = @"utcDateFormatter";
 @end
 #endif
 
-typedef struct {
-  uint8_t       info_version;
-  const char    msai_version[16];
-  const char    msai_build[16];
-} msai_info_t;
-
-msai_info_t applicationinsights_library_info __attribute__((section("__TEXT,__msai_ios,regular,no_dead_strip"))) = {
-  .info_version = 1,
-  .msai_version = MSAI_C_VERSION,
-  .msai_build = MSAI_C_BUILD
-};
-
 #pragma mark NSString helpers
 
 NSString *msai_URLEncodedString(NSString *inputString) {
@@ -194,11 +182,11 @@ NSString *msai_screenSize(void){
 }
 
 NSString *msai_sdkVersion(void){
-  return [NSString stringWithFormat:@"ios:%@", [NSString stringWithUTF8String:applicationinsights_library_info.msai_version]];
+  return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 }
 
 NSString *msai_sdkBuild(void) {
-  return [NSString stringWithUTF8String:applicationinsights_library_info.msai_build];
+  return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
 }
 
 NSString *msai_devicePlatform(void) {

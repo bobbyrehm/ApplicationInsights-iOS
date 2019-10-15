@@ -313,7 +313,6 @@
 		1E49A4D5161222D400463151 /* ApplicationInsightsPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationInsightsPrivate.m; sourceTree = "<group>"; };
 		1E5954F215B6F24A00A03429 /* libApplicationInsights.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libApplicationInsights.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5A459016F0DFC200B55C04 /* ApplicationInsightsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationInsightsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E66CA9115D4100500F35BED /* buildnumber.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = buildnumber.xcconfig; sourceTree = "<group>"; };
 		1E71509A15B5C76F004E88FF /* ApplicationInsights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationInsights.h; sourceTree = "<group>"; };
 		1E754DC61621BC170070AB92 /* ApplicationInsights.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ApplicationInsights.xcconfig; sourceTree = "<group>"; };
 		1E84DB3317E0977C00AC83FD /* ApplicationInsightsFeatureConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationInsightsFeatureConfig.h; sourceTree = "<group>"; };
@@ -626,7 +625,6 @@
 				1B2B6E891C5B039800D89D13 /* release.xcconfig */,
 				1B2B6E851C5AFF3600D89D13 /* module.modulemap */,
 				1E754DC61621BC170070AB92 /* ApplicationInsights.xcconfig */,
-				1E66CA9115D4100500F35BED /* buildnumber.xcconfig */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -1201,7 +1199,6 @@
 		1E5954F015B6F24A00A03429 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"ARCHS[sdk=iphonesimulator*]" = "$(MSAI_SIM_ARCHS)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				DSTROOT = /tmp/AIS.dst;
@@ -1215,7 +1212,6 @@
 				PRODUCT_NAME = ApplicationInsights;
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
 				SKIP_INSTALL = YES;
-				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(MSAI_SIM_ARCHS)";
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wextra",
@@ -1227,7 +1223,6 @@
 		1E5954F115B6F24A00A03429 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"ARCHS[sdk=iphonesimulator*]" = "$(MSAI_SIM_ARCHS)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				DSTROOT = /tmp/AIS.dst;
@@ -1241,7 +1236,6 @@
 				PRODUCT_NAME = ApplicationInsights;
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
 				SKIP_INSTALL = YES;
-				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(MSAI_SIM_ARCHS)";
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wextra",
@@ -1379,7 +1373,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 12;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = K6SVRZ3MWM;
@@ -1401,6 +1395,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = "1.0-beta.9";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jpjventures.ApplicationInsights-Framework";
@@ -1427,7 +1422,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 12;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = K6SVRZ3MWM;
@@ -1446,6 +1441,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = "1.0-beta.9";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jpjventures.ApplicationInsights-Framework";
@@ -1461,7 +1457,6 @@
 		};
 		E400563C148D79B500EB22B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E66CA9115D4100500F35BED /* buildnumber.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
