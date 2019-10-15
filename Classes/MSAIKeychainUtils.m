@@ -34,7 +34,7 @@ static NSString *MSAIKeychainUtilsErrorDomain = @"MSAIKeychainUtilsErrorDomain";
 
 @implementation MSAIKeychainUtils
 
-+ (NSString *) getPasswordForUsername: (NSString *) username andServiceName: (NSString *) serviceName error: (NSError **) error {
++ (NSString * _Nullable) getPasswordForUsername: (NSString *) username andServiceName: (NSString *) serviceName error: (NSError **) error {
 	if (!username || !serviceName) {
 		if (error != nil) {
 			*error = [NSError errorWithDomain: MSAIKeychainUtilsErrorDomain code: -2000 userInfo: nil];

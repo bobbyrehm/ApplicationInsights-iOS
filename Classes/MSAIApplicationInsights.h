@@ -82,7 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
  * If you set your custom server URL, make sure you set the full URL (e.g. https://yourdomain.com/track/)
  * @warning This property needs to be set before calling `start`.
  */
-@property (nonatomic, copy) NSString *serverURL;
+@property (nonatomic, copy) NSString * _Nullable serverURL;
 
 #if MSAI_FEATURE_TELEMETRY
 /**

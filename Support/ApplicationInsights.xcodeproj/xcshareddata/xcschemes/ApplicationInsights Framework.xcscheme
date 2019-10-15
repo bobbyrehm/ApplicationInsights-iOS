@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E4F61E91621AD970033EFC5"
-               BuildableName = "ApplicationInsights Framework"
+               BlueprintIdentifier = "96BEBBB223567F8F006C31CE"
+               BuildableName = "ApplicationInsights_Framework.framework"
                BlueprintName = "ApplicationInsights Framework"
                ReferencedContainer = "container:ApplicationInsights.xcodeproj">
             </BuildableReference>
@@ -43,8 +43,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1E4F61E91621AD970033EFC5"
-            BuildableName = "ApplicationInsights Framework"
+            BlueprintIdentifier = "96BEBBB223567F8F006C31CE"
+            BuildableName = "ApplicationInsights_Framework.framework"
             BlueprintName = "ApplicationInsights Framework"
             ReferencedContainer = "container:ApplicationInsights.xcodeproj">
          </BuildableReference>

@@ -108,7 +108,7 @@ NSUInteger const defaultFileCount = 50;
  * Deserializes a bundle from disk using NSKeyedUnarchiver and deletes it from disk
  * @return a bundle of data or nil
  */
-- (NSArray *)bundleAtPath:(NSString *)path {
+- (NSArray * _Nullable)bundleAtPath:(NSString *)path {
   NSArray *bundle = nil;
   if(path && [path rangeOfString:kFileBaseString].location != NSNotFound) {
     bundle = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
@@ -116,7 +116,7 @@ NSUInteger const defaultFileCount = 50;
   return bundle;
 }
 
-- (NSData *)dataAtPath:(NSString *)path {
+- (NSData * _Nullable)dataAtPath:(NSString *)path {
   NSData *data = nil;
   
   if(path && [path rangeOfString:kFileBaseString].location != NSNotFound) {

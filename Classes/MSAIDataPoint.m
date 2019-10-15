@@ -14,7 +14,6 @@
 
 ///
 /// Adds all members of this class to a dictionary
-/// @param dictionary to which the members of this class will be added.
 ///
 - (MSAIOrderedDictionary *)serializeToDictionary {
   MSAIOrderedDictionary *dict = [super serializeToDictionary];
@@ -59,7 +58,7 @@
 
 - (void)encodeWithCoder:(NSCoder *)coder {
   [coder encodeObject:self.name forKey:@"self.name"];
-  [coder encodeInt:self.kind forKey:@"self.kind"];
+  [coder encodeInt64:self.kind forKey:@"self.kind"];
   [coder encodeObject:self.value forKey:@"self.value"];
   [coder encodeObject:self.count forKey:@"self.count"];
   [coder encodeObject:self.min forKey:@"self.min"];

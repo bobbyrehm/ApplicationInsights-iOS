@@ -3,22 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		1E4F61E91621AD970033EFC5 /* ApplicationInsights Framework */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 1E4F61EA1621AD970033EFC5 /* Build configuration list for PBXAggregateTarget "ApplicationInsights Framework" */;
-			buildPhases = (
-				1E4F61ED1621ADE70033EFC5 /* Build universal embedded framework */,
-			);
-			dependencies = (
-				1E754E431621F6290070AB92 /* PBXTargetDependency */,
-			);
-			name = "ApplicationInsights Framework";
-			productName = "ApplicationInsights Framework";
-		};
 		1E8E66AD15BC3D7700632A2E /* ApplicationInsights Documentation */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 1E8E66B015BC3D7700632A2E /* Build configuration list for PBXAggregateTarget "ApplicationInsights Documentation" */;
@@ -170,19 +158,114 @@
 		80E1A45A1AE54D6200603B0A /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E1A44D1AE54C8500603B0A /* libOCMock.a */; };
 		80ECBD1F1ADE9E39005CACF4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B69EEF1ADDC49100C47B0A /* libz.dylib */; };
 		80F334B21A9C93290098026F /* MSAIApplicationInsightsPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F334B11A9C93290098026F /* MSAIApplicationInsightsPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		96BEBBB723567F8F006C31CE /* ApplicationInsights_Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 96BEBBB523567F8F006C31CE /* ApplicationInsights_Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBBB23567FA9006C31CE /* MSAIApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD721A712974004EA1B6 /* MSAIApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBBC23567FA9006C31CE /* MSAIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD731A712974004EA1B6 /* MSAIApplication.m */; };
+		96BEBBBD23567FA9006C31CE /* MSAIBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD741A712974004EA1B6 /* MSAIBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBBE23567FA9006C31CE /* MSAIBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD751A712974004EA1B6 /* MSAIBase.m */; };
+		96BEBBBF23567FA9006C31CE /* MSAIData.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD761A712974004EA1B6 /* MSAIData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBC023567FA9006C31CE /* MSAIData.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD771A712974004EA1B6 /* MSAIData.m */; };
+		96BEBBC123567FA9006C31CE /* MSAIDataPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD781A712974004EA1B6 /* MSAIDataPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBC223567FA9006C31CE /* MSAIDataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD791A712974004EA1B6 /* MSAIDataPoint.m */; };
+		96BEBBC323567FA9006C31CE /* MSAIDataPointType.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD7A1A712974004EA1B6 /* MSAIDataPointType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBC423567FA9006C31CE /* MSAIDependencyKind.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD7B1A712974004EA1B6 /* MSAIDependencyKind.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBC523567FA9006C31CE /* MSAIDependencySourceType.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD7C1A712974004EA1B6 /* MSAIDependencySourceType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBC623567FA9006C31CE /* MSAIDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD7D1A712974004EA1B6 /* MSAIDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBC723567FA9006C31CE /* MSAIDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD7E1A712974004EA1B6 /* MSAIDevice.m */; };
+		96BEBBC823567FA9006C31CE /* MSAIDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD7F1A712974004EA1B6 /* MSAIDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBC923567FA9006C31CE /* MSAIDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD801A712974004EA1B6 /* MSAIDomain.m */; };
+		96BEBBCA23567FA9006C31CE /* MSAIEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD811A712974004EA1B6 /* MSAIEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBCB23567FA9006C31CE /* MSAIEnvelope.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD821A712974004EA1B6 /* MSAIEnvelope.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBCC23567FA9006C31CE /* MSAIEnvelope.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD831A712974004EA1B6 /* MSAIEnvelope.m */; };
+		96BEBBCD23567FA9006C31CE /* MSAIEventData.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD841A712974004EA1B6 /* MSAIEventData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBCE23567FA9006C31CE /* MSAIEventData.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD851A712974004EA1B6 /* MSAIEventData.m */; };
+		96BEBBCF23567FA9006C31CE /* MSAIInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD8A1A712974004EA1B6 /* MSAIInternal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBD023567FA9006C31CE /* MSAIInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD8B1A712974004EA1B6 /* MSAIInternal.m */; };
+		96BEBBD123567FA9006C31CE /* MSAILocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD8C1A712974004EA1B6 /* MSAILocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBD223567FA9006C31CE /* MSAILocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD8D1A712974004EA1B6 /* MSAILocation.m */; };
+		96BEBBD323567FA9006C31CE /* MSAIMessageData.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD8E1A712974004EA1B6 /* MSAIMessageData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBD423567FA9006C31CE /* MSAIMessageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD8F1A712974004EA1B6 /* MSAIMessageData.m */; };
+		96BEBBD523567FA9006C31CE /* MSAIMetricData.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD901A712974004EA1B6 /* MSAIMetricData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBD623567FA9006C31CE /* MSAIMetricData.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD911A712974004EA1B6 /* MSAIMetricData.m */; };
+		96BEBBD723567FA9006C31CE /* MSAIObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD6A1A712969004EA1B6 /* MSAIObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBD823567FA9006C31CE /* MSAIObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD6B1A712969004EA1B6 /* MSAIObject.m */; };
+		96BEBBD923567FA9006C31CE /* MSAIOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD921A712974004EA1B6 /* MSAIOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBDA23567FA9006C31CE /* MSAIOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD931A712974004EA1B6 /* MSAIOperation.m */; };
+		96BEBBDB23567FA9006C31CE /* MSAIPageViewData.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD941A712974004EA1B6 /* MSAIPageViewData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBDC23567FA9006C31CE /* MSAIPageViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD951A712974004EA1B6 /* MSAIPageViewData.m */; };
+		96BEBBDD23567FA9006C31CE /* MSAIPageViewPerfData.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD961A712974004EA1B6 /* MSAIPageViewPerfData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBDE23567FA9006C31CE /* MSAIPageViewPerfData.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD971A712974004EA1B6 /* MSAIPageViewPerfData.m */; };
+		96BEBBDF23567FA9006C31CE /* MSAIRemoteDependencyData.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD981A712974004EA1B6 /* MSAIRemoteDependencyData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBE023567FA9006C31CE /* MSAIRemoteDependencyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD991A712974004EA1B6 /* MSAIRemoteDependencyData.m */; };
+		96BEBBE123567FA9006C31CE /* MSAIRequestData.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD9A1A712974004EA1B6 /* MSAIRequestData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBE223567FA9006C31CE /* MSAIRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD9B1A712974004EA1B6 /* MSAIRequestData.m */; };
+		96BEBBE323567FA9006C31CE /* MSAISession.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD9C1A712974004EA1B6 /* MSAISession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBE423567FA9006C31CE /* MSAISession.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD9D1A712974004EA1B6 /* MSAISession.m */; };
+		96BEBBE523567FA9006C31CE /* MSAISessionState.h in Headers */ = {isa = PBXBuildFile; fileRef = 809E9E571AC455D9008A1AB5 /* MSAISessionState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBE623567FA9006C31CE /* MSAISessionStateData.h in Headers */ = {isa = PBXBuildFile; fileRef = 809E9E581AC455D9008A1AB5 /* MSAISessionStateData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBE723567FA9006C31CE /* MSAISessionStateData.m in Sources */ = {isa = PBXBuildFile; fileRef = 809E9E591AC455D9008A1AB5 /* MSAISessionStateData.m */; };
+		96BEBBE823567FA9006C31CE /* MSAISeverityLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD9E1A712974004EA1B6 /* MSAISeverityLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBE923567FA9006C31CE /* MSAITelemetryData.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD6C1A712969004EA1B6 /* MSAITelemetryData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBEA23567FA9006C31CE /* MSAITelemetryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD6D1A712969004EA1B6 /* MSAITelemetryData.m */; };
+		96BEBBEB23567FA9006C31CE /* MSAIUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFDA11A712974004EA1B6 /* MSAIUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBEC23567FA9006C31CE /* MSAIUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFDA21A712974004EA1B6 /* MSAIUser.m */; };
+		96BEBBED23567FB0006C31CE /* ApplicationInsightsPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E49A4D4161222D400463151 /* ApplicationInsightsPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		96BEBBEE23567FB0006C31CE /* ApplicationInsightsPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E49A4D5161222D400463151 /* ApplicationInsightsPrivate.m */; };
+		96BEBBEF23567FB0006C31CE /* MSAICategoryContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC859691A7ACA820018FB6B /* MSAICategoryContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBF023567FB0006C31CE /* MSAICategoryContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8596A1A7ACA820018FB6B /* MSAICategoryContainer.m */; };
+		96BEBBF123567FB0006C31CE /* MSAIContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B62F4D61A692A3200EB5AD0 /* MSAIContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBF223567FB0006C31CE /* MSAIContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B62F4D71A692A3200EB5AD0 /* MSAIContext.m */; };
+		96BEBBF323567FB0006C31CE /* MSAIContextHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE53D741AB889420048ABBC /* MSAIContextHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBF423567FB0006C31CE /* MSAIContextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE53D751AB889420048ABBC /* MSAIContextHelper.m */; };
+		96BEBBF523567FB0006C31CE /* MSAIContextHelperPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B2439BF1AB8AB8100B07374 /* MSAIContextHelperPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		96BEBBF623567FB0006C31CE /* MSAIContextPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B62F4DA1A692A6F00EB5AD0 /* MSAIContextPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBF723567FB0006C31CE /* MSAIGZIP.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B69EEB1ADDC09900C47B0A /* MSAIGZIP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBF823567FB0006C31CE /* MSAIHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E49A4A5161222B900463151 /* MSAIHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBF923567FB0006C31CE /* MSAIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E49A4A6161222B900463151 /* MSAIHelper.m */; };
+		96BEBBFA23567FB0006C31CE /* MSAIKeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E0FEE26173BDB260061331F /* MSAIKeychainUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBFB23567FB0006C31CE /* MSAIKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0FEE27173BDB260061331F /* MSAIKeychainUtils.m */; };
+		96BEBBFC23567FB0006C31CE /* MSAINullability.h in Headers */ = {isa = PBXBuildFile; fileRef = 80677CDA1B2EF23000B324E5 /* MSAINullability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBFD23567FB0006C31CE /* MSAIOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 807CFD661A71294E004EA1B6 /* MSAIOrderedDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBBFE23567FB0006C31CE /* MSAIOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 807CFD671A71294E004EA1B6 /* MSAIOrderedDictionary.m */; };
+		96BEBBFF23567FB0006C31CE /* MSAIPageViewLogging_UIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC8596D1A7ACC040018FB6B /* MSAIPageViewLogging_UIViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC0023567FB5006C31CE /* MSAITelemetryManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EB2E4C418FD4CEA008BB1CF /* MSAITelemetryManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC0123567FB5006C31CE /* MSAITelemetryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2E4C518FD4CEA008BB1CF /* MSAITelemetryManager.m */; };
+		96BEBC0223567FB5006C31CE /* MSAITelemetryManagerPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EB2E4C818FD4E90008BB1CF /* MSAITelemetryManagerPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		96BEBC03235680B9006C31CE /* MSAIPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 594931F0F69C22CBB67A2AD9 /* MSAIPersistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC04235680B9006C31CE /* MSAIPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 59493E91C1D38C3FC5F77D19 /* MSAIPersistence.m */; };
+		96BEBC05235680B9006C31CE /* MSAIPersistencePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8004739B1ABB8FC200BBFE62 /* MSAIPersistencePrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		96BEBC06235680BF006C31CE /* MSAIChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BBBCF2E1A6594AE00253031 /* MSAIChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC07235680BF006C31CE /* MSAIChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBCF2F1A6594AE00253031 /* MSAIChannel.m */; };
+		96BEBC08235680BF006C31CE /* MSAIChannelPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B4D17E41A666EE30079D948 /* MSAIChannelPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		96BEBC09235680BF006C31CE /* MSAIEnvelopeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B47E02C1A84D3DF000B4C3D /* MSAIEnvelopeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC0A235680BF006C31CE /* MSAIEnvelopeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B47E02D1A84D3DF000B4C3D /* MSAIEnvelopeManager.m */; };
+		96BEBC0B235680BF006C31CE /* MSAIEnvelopeManagerPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B47E0301A84D413000B4C3D /* MSAIEnvelopeManagerPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		96BEBC0C235680BF006C31CE /* MSAITelemetryContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BBBCF301A6594AE00253031 /* MSAITelemetryContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC0D235680BF006C31CE /* MSAITelemetryContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBCF311A6594AE00253031 /* MSAITelemetryContext.m */; };
+		96BEBC0E235680BF006C31CE /* MSAITelemetryContextPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE129921A725797004D2AEE /* MSAITelemetryContextPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		96BEBC0F235680C7006C31CE /* MSAIHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E4933E7E17B66CDA00B11ACC /* MSAIHTTPOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC10235680C7006C31CE /* MSAIHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4933E7F17B66CDA00B11ACC /* MSAIHTTPOperation.m */; };
+		96BEBC11235680C7006C31CE /* MSAIAppClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E40E0B0A17DA1AFF005E38C1 /* MSAIAppClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC12235680C7006C31CE /* MSAIAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E40E0B0B17DA1AFF005E38C1 /* MSAIAppClient.m */; };
+		96BEBC13235680C7006C31CE /* MSAISender.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE29B461A6FB8C20014A10F /* MSAISender.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC14235680C7006C31CE /* MSAISender.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE29B471A6FB8C20014A10F /* MSAISender.m */; };
+		96BEBC15235680C7006C31CE /* MSAISenderPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE29B4A1A6FBAB50014A10F /* MSAISenderPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC16235680C7006C31CE /* MSAIReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3FB89C1A93756100D06311 /* MSAIReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC17235680C7006C31CE /* MSAIReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3FB89D1A93756100D06311 /* MSAIReachability.m */; };
+		96BEBC18235680C7006C31CE /* MSAIReachabilityPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3FB8A51A9383C300D06311 /* MSAIReachabilityPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		96BEBC19235680CB006C31CE /* ApplicationInsights.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E71509A15B5C76F004E88FF /* ApplicationInsights.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC1A235680CB006C31CE /* ApplicationInsightsFeatureConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E84DB3317E0977C00AC83FD /* ApplicationInsightsFeatureConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC1B235680CB006C31CE /* MSAIApplicationInsights.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EB465148D7BF50015DEDC /* MSAIApplicationInsights.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BEBC1C235680CB006C31CE /* MSAIApplicationInsightsPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F334B11A9C93290098026F /* MSAIApplicationInsightsPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		96BEBC1D235680CB006C31CE /* MSAIApplicationInsights.m in Sources */ = {isa = PBXBuildFile; fileRef = E41EB466148D7BF50015DEDC /* MSAIApplicationInsights.m */; };
+		96BEBC1E235681A8006C31CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B85606E1A7A6A9D00A54FB7 /* UIKit.framework */; platformFilter = ios; };
+		96BEBC20235681B0006C31CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BEBC1F235681B0006C31CE /* Foundation.framework */; platformFilter = ios; };
 		E40E0B0D17DA1AFF005E38C1 /* MSAIAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E40E0B0B17DA1AFF005E38C1 /* MSAIAppClient.m */; };
 		E4933E8017B66CDA00B11ACC /* MSAIHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E4933E7E17B66CDA00B11ACC /* MSAIHTTPOperation.h */; };
 		E4933E8117B66CDA00B11ACC /* MSAIHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4933E7F17B66CDA00B11ACC /* MSAIHTTPOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1E754E421621F6290070AB92 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4005611148D79B500EB22B9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E8E66AD15BC3D7700632A2E;
-			remoteInfo = "ApplicationInsights Documentation";
-		};
 		1EA116FE16F4D302001C015C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E4005611148D79B500EB22B9 /* Project object */;
@@ -347,6 +430,10 @@
 		80E1A4561AE54C8500603B0A /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
 		80E1A4571AE54C8500603B0A /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
 		80F334B11A9C93290098026F /* MSAIApplicationInsightsPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAIApplicationInsightsPrivate.h; sourceTree = "<group>"; };
+		96BEBBB323567F8F006C31CE /* ApplicationInsights_Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApplicationInsights_Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BEBBB523567F8F006C31CE /* ApplicationInsights_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationInsights_Framework.h; sourceTree = "<group>"; };
+		96BEBBB623567F8F006C31CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96BEBC1F235681B0006C31CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E400561D148D79B500EB22B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E40E0B0A17DA1AFF005E38C1 /* MSAIAppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAIAppClient.h; sourceTree = "<group>"; };
 		E40E0B0B17DA1AFF005E38C1 /* MSAIAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAIAppClient.m; sourceTree = "<group>"; };
@@ -377,6 +464,15 @@
 				80E1A44C1AE54C7800603B0A /* OCHamcrestIOS.framework in Frameworks */,
 				1E5A459516F0DFC200B55C04 /* Foundation.framework in Frameworks */,
 				80E1A44A1AE54B6C00603B0A /* OCMockitoIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96BEBBB023567F8F006C31CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96BEBC20235681B0006C31CE /* Foundation.framework in Frameworks */,
+				96BEBC1E235681A8006C31CE /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,11 +684,21 @@
 			path = ApplicationInsightsTests/OCMock;
 			sourceTree = SOURCE_ROOT;
 		};
+		96BEBBB423567F8F006C31CE /* ApplicationInsights Framework */ = {
+			isa = PBXGroup;
+			children = (
+				96BEBBB523567F8F006C31CE /* ApplicationInsights_Framework.h */,
+				96BEBBB623567F8F006C31CE /* Info.plist */,
+			);
+			path = "ApplicationInsights Framework";
+			sourceTree = "<group>";
+		};
 		E400560F148D79B500EB22B9 = {
 			isa = PBXGroup;
 			children = (
 				E41EB489148D7BF90015DEDC /* ApplicationInsights */,
 				1E5A459616F0DFC200B55C04 /* ApplicationInsights Tests */,
+				96BEBBB423567F8F006C31CE /* ApplicationInsights Framework */,
 				E400561C148D79B500EB22B9 /* Frameworks */,
 				E4005648148D7A3000EB22B9 /* Resources */,
 				1E66CA8F15D40FF600F35BED /* Support */,
@@ -608,6 +714,7 @@
 			children = (
 				1E5954F215B6F24A00A03429 /* libApplicationInsights.a */,
 				1E5A459016F0DFC200B55C04 /* ApplicationInsightsTests.xctest */,
+				96BEBBB323567F8F006C31CE /* ApplicationInsights_Framework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -615,6 +722,7 @@
 		E400561C148D79B500EB22B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96BEBC1F235681B0006C31CE /* Foundation.framework */,
 				1E3A26131B2B2CFE00D59683 /* libc++.dylib */,
 				80B69EEF1ADDC49100C47B0A /* libz.dylib */,
 				1B3B73071A94BC8E008DCADA /* CoreTelephony.framework */,
@@ -753,6 +861,74 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96BEBBAE23567F8F006C31CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96BEBC0F235680C7006C31CE /* MSAIHTTPOperation.h in Headers */,
+				96BEBC06235680BF006C31CE /* MSAIChannel.h in Headers */,
+				96BEBBF723567FB0006C31CE /* MSAIGZIP.h in Headers */,
+				96BEBBDB23567FA9006C31CE /* MSAIPageViewData.h in Headers */,
+				96BEBBE523567FA9006C31CE /* MSAISessionState.h in Headers */,
+				96BEBBF323567FB0006C31CE /* MSAIContextHelper.h in Headers */,
+				96BEBC19235680CB006C31CE /* ApplicationInsights.h in Headers */,
+				96BEBBD323567FA9006C31CE /* MSAIMessageData.h in Headers */,
+				96BEBBCB23567FA9006C31CE /* MSAIEnvelope.h in Headers */,
+				96BEBC0023567FB5006C31CE /* MSAITelemetryManager.h in Headers */,
+				96BEBBFF23567FB0006C31CE /* MSAIPageViewLogging_UIViewController.h in Headers */,
+				96BEBBE923567FA9006C31CE /* MSAITelemetryData.h in Headers */,
+				96BEBBC823567FA9006C31CE /* MSAIDomain.h in Headers */,
+				96BEBBBF23567FA9006C31CE /* MSAIData.h in Headers */,
+				96BEBBC423567FA9006C31CE /* MSAIDependencyKind.h in Headers */,
+				96BEBBFC23567FB0006C31CE /* MSAINullability.h in Headers */,
+				96BEBBD923567FA9006C31CE /* MSAIOperation.h in Headers */,
+				96BEBC13235680C7006C31CE /* MSAISender.h in Headers */,
+				96BEBBC323567FA9006C31CE /* MSAIDataPointType.h in Headers */,
+				96BEBBBD23567FA9006C31CE /* MSAIBase.h in Headers */,
+				96BEBBC523567FA9006C31CE /* MSAIDependencySourceType.h in Headers */,
+				96BEBBEB23567FA9006C31CE /* MSAIUser.h in Headers */,
+				96BEBC11235680C7006C31CE /* MSAIAppClient.h in Headers */,
+				96BEBBF623567FB0006C31CE /* MSAIContextPrivate.h in Headers */,
+				96BEBC16235680C7006C31CE /* MSAIReachability.h in Headers */,
+				96BEBBEF23567FB0006C31CE /* MSAICategoryContainer.h in Headers */,
+				96BEBBFA23567FB0006C31CE /* MSAIKeychainUtils.h in Headers */,
+				96BEBC03235680B9006C31CE /* MSAIPersistence.h in Headers */,
+				96BEBBB723567F8F006C31CE /* ApplicationInsights_Framework.h in Headers */,
+				96BEBBD123567FA9006C31CE /* MSAILocation.h in Headers */,
+				96BEBBCA23567FA9006C31CE /* MSAIEnums.h in Headers */,
+				96BEBBF123567FB0006C31CE /* MSAIContext.h in Headers */,
+				96BEBBDD23567FA9006C31CE /* MSAIPageViewPerfData.h in Headers */,
+				96BEBBC623567FA9006C31CE /* MSAIDevice.h in Headers */,
+				96BEBBFD23567FB0006C31CE /* MSAIOrderedDictionary.h in Headers */,
+				96BEBBBB23567FA9006C31CE /* MSAIApplication.h in Headers */,
+				96BEBBF823567FB0006C31CE /* MSAIHelper.h in Headers */,
+				96BEBBE623567FA9006C31CE /* MSAISessionStateData.h in Headers */,
+				96BEBC0C235680BF006C31CE /* MSAITelemetryContext.h in Headers */,
+				96BEBBD723567FA9006C31CE /* MSAIObject.h in Headers */,
+				96BEBC1B235680CB006C31CE /* MSAIApplicationInsights.h in Headers */,
+				96BEBBE323567FA9006C31CE /* MSAISession.h in Headers */,
+				96BEBC15235680C7006C31CE /* MSAISenderPrivate.h in Headers */,
+				96BEBBCF23567FA9006C31CE /* MSAIInternal.h in Headers */,
+				96BEBBE823567FA9006C31CE /* MSAISeverityLevel.h in Headers */,
+				96BEBBD523567FA9006C31CE /* MSAIMetricData.h in Headers */,
+				96BEBBC123567FA9006C31CE /* MSAIDataPoint.h in Headers */,
+				96BEBBE123567FA9006C31CE /* MSAIRequestData.h in Headers */,
+				96BEBBCD23567FA9006C31CE /* MSAIEventData.h in Headers */,
+				96BEBC09235680BF006C31CE /* MSAIEnvelopeManager.h in Headers */,
+				96BEBC1A235680CB006C31CE /* ApplicationInsightsFeatureConfig.h in Headers */,
+				96BEBBDF23567FA9006C31CE /* MSAIRemoteDependencyData.h in Headers */,
+				96BEBC1C235680CB006C31CE /* MSAIApplicationInsightsPrivate.h in Headers */,
+				96BEBBED23567FB0006C31CE /* ApplicationInsightsPrivate.h in Headers */,
+				96BEBC18235680C7006C31CE /* MSAIReachabilityPrivate.h in Headers */,
+				96BEBC0E235680BF006C31CE /* MSAITelemetryContextPrivate.h in Headers */,
+				96BEBC08235680BF006C31CE /* MSAIChannelPrivate.h in Headers */,
+				96BEBC0B235680BF006C31CE /* MSAIEnvelopeManagerPrivate.h in Headers */,
+				96BEBBF523567FB0006C31CE /* MSAIContextHelperPrivate.h in Headers */,
+				96BEBC05235680B9006C31CE /* MSAIPersistencePrivate.h in Headers */,
+				96BEBC0223567FB5006C31CE /* MSAITelemetryManagerPrivate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -791,6 +967,24 @@
 			productReference = 1E5A459016F0DFC200B55C04 /* ApplicationInsightsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		96BEBBB223567F8F006C31CE /* ApplicationInsights Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96BEBBB823567F8F006C31CE /* Build configuration list for PBXNativeTarget "ApplicationInsights Framework" */;
+			buildPhases = (
+				96BEBBAE23567F8F006C31CE /* Headers */,
+				96BEBBAF23567F8F006C31CE /* Sources */,
+				96BEBBB023567F8F006C31CE /* Frameworks */,
+				96BEBBB123567F8F006C31CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ApplicationInsights Framework";
+			productName = "ApplicationInsights Framework";
+			productReference = 96BEBBB323567F8F006C31CE /* ApplicationInsights_Framework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -799,6 +993,11 @@
 			attributes = {
 				LastTestingUpgradeCheck = 0600;
 				LastUpgradeCheck = 1110;
+				TargetAttributes = {
+					96BEBBB223567F8F006C31CE = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
 			};
 			buildConfigurationList = E4005614148D79B500EB22B9 /* Build configuration list for PBXProject "ApplicationInsights" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -815,8 +1014,8 @@
 			targets = (
 				1E5954CB15B6F24A00A03429 /* ApplicationInsights */,
 				1E8E66AD15BC3D7700632A2E /* ApplicationInsights Documentation */,
-				1E4F61E91621AD970033EFC5 /* ApplicationInsights Framework */,
 				1E5A458F16F0DFC200B55C04 /* ApplicationInsights Tests */,
+				96BEBBB223567F8F006C31CE /* ApplicationInsights Framework */,
 			);
 		};
 /* End PBXProject section */
@@ -829,23 +1028,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1E4F61ED1621ADE70033EFC5 /* Build universal embedded framework */ = {
-			isa = PBXShellScriptBuildPhase;
+		96BEBBB123567F8F006C31CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "Build universal embedded framework";
-			outputPaths = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Sets the target folders and the final framework product.\nFMK_NAME=ApplicationInsights\nFMK_VERSION=A\n\n# Documentation\nAIS_DOCSET_VERSION_NAME=\"com.microsoft.applicationinsights.${AIS_DOCSET_NAME}-${VERSION_STRING}\"\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nPRODUCTS_DIR=${SRCROOT}/../Products\nZIP_FOLDER=${FMK_NAME}\nTEMP_DIR=${PRODUCTS_DIR}/${ZIP_FOLDER}\nINSTALL_DIR=${TEMP_DIR}/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator\n\n# Building the full featured SDK\n\n# Building both architectures.\nxcodebuild -project \"ApplicationInsights.xcodeproj\" -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos\nxcodebuild -project \"ApplicationInsights.xcodeproj\" -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator\n\n# Cleaning the products directory to make sure we have the latest files in it.\nif [ -d \"${TEMP_DIR}\" ]\nthen\nrm -rf \"${TEMP_DIR}\"\nfi\n\n# Creates and renews the final product folder.\nmkdir -p \"${INSTALL_DIR}\"\nmkdir -p \"${INSTALL_DIR}/Modules\"\nmkdir -p \"${INSTALL_DIR}/Versions\"\nmkdir -p \"${INSTALL_DIR}/Versions/${FMK_VERSION}\"\nmkdir -p \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources\"\nmkdir -p \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Headers\"\n\n# Creates the internal links.\n# It MUST uses relative path, otherwise will not work when the folder is copied/moved.\nln -s \"${FMK_VERSION}\" \"${INSTALL_DIR}/Versions/Current\"\nln -s \"Versions/Current/Headers\" \"${INSTALL_DIR}/Headers\"\nln -s \"Versions/Current/Resources\" \"${INSTALL_DIR}/Resources\"\nln -s \"Versions/Current/${FMK_NAME}\" \"${INSTALL_DIR}/${FMK_NAME}\"\n\n# Copy the swift import file\ncp -f \"${SRCROOT}/module.modulemap\" \"${INSTALL_DIR}/Modules/\"\n\n# Copies the headers and resources files to the final product folder.\ncp -R \"${SRCROOT}/build/Release-iphoneos/include/${FMK_NAME}/\" \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Headers/\"\ncp -f \"${SRCROOT}/${FMK_NAME}.xcconfig\" \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources/\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/lib${FMK_NAME}.a\" \"${SIMULATOR_DIR}/lib${FMK_NAME}.a\" -output \"${INSTALL_DIR}/Versions/${FMK_VERSION}/${FMK_NAME}\"\n\nrm -r \"${WRK_DIR}\"\n\n# build embeddedframework folder and move framework into it\nmkdir \"${INSTALL_DIR}/../${FMK_NAME}\"\nmv \"${INSTALL_DIR}\" \"${INSTALL_DIR}/../${FMK_NAME}/${FMK_NAME}.framework\"\n\n# copy license, changelog, documentation, integration json\n#cp -f \"${SRCROOT}/../Docs/Changelog-template.md\" \"${TEMP_DIR}/CHANGELOG\"\ncp -f \"${SRCROOT}/../Docs/Readme-template.md\" \"${TEMP_DIR}/README.md\"\ncp -f \"${SRCROOT}/../Docs/Readme-template.md\" \"${SRCROOT}/../README.md\"\ncp -f \"${SRCROOT}/../LICENSE\" \"${TEMP_DIR}\"\nmkdir \"${TEMP_DIR}/${AIS_DOCSET_VERSION_NAME}.docset\"\ncp -R \"${SRCROOT}/../documentation/docset/Contents\" \"${TEMP_DIR}/${AIS_DOCSET_VERSION_NAME}.docset\"\n\n# build zip\ncd \"${PRODUCTS_DIR}\"\nrm -f \"${FMK_NAME}-${VERSION_STRING}.zip\"\nzip -yr \"${FMK_NAME}-${VERSION_STRING}.zip\" \"${ZIP_FOLDER}\" -x \\*/.*\n";
 		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
 		1E8E66B215BC3D8200632A2E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -949,14 +1141,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96BEBBAF23567F8F006C31CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96BEBBFE23567FB0006C31CE /* MSAIOrderedDictionary.m in Sources */,
+				96BEBBDC23567FA9006C31CE /* MSAIPageViewData.m in Sources */,
+				96BEBBF223567FB0006C31CE /* MSAIContext.m in Sources */,
+				96BEBBE023567FA9006C31CE /* MSAIRemoteDependencyData.m in Sources */,
+				96BEBBCE23567FA9006C31CE /* MSAIEventData.m in Sources */,
+				96BEBC10235680C7006C31CE /* MSAIHTTPOperation.m in Sources */,
+				96BEBBE223567FA9006C31CE /* MSAIRequestData.m in Sources */,
+				96BEBBD423567FA9006C31CE /* MSAIMessageData.m in Sources */,
+				96BEBBC223567FA9006C31CE /* MSAIDataPoint.m in Sources */,
+				96BEBBF923567FB0006C31CE /* MSAIHelper.m in Sources */,
+				96BEBBD823567FA9006C31CE /* MSAIObject.m in Sources */,
+				96BEBBD023567FA9006C31CE /* MSAIInternal.m in Sources */,
+				96BEBC07235680BF006C31CE /* MSAIChannel.m in Sources */,
+				96BEBBEC23567FA9006C31CE /* MSAIUser.m in Sources */,
+				96BEBC17235680C7006C31CE /* MSAIReachability.m in Sources */,
+				96BEBBC923567FA9006C31CE /* MSAIDomain.m in Sources */,
+				96BEBC0123567FB5006C31CE /* MSAITelemetryManager.m in Sources */,
+				96BEBBBE23567FA9006C31CE /* MSAIBase.m in Sources */,
+				96BEBBCC23567FA9006C31CE /* MSAIEnvelope.m in Sources */,
+				96BEBBD623567FA9006C31CE /* MSAIMetricData.m in Sources */,
+				96BEBBF023567FB0006C31CE /* MSAICategoryContainer.m in Sources */,
+				96BEBBDE23567FA9006C31CE /* MSAIPageViewPerfData.m in Sources */,
+				96BEBBFB23567FB0006C31CE /* MSAIKeychainUtils.m in Sources */,
+				96BEBBDA23567FA9006C31CE /* MSAIOperation.m in Sources */,
+				96BEBBE723567FA9006C31CE /* MSAISessionStateData.m in Sources */,
+				96BEBC14235680C7006C31CE /* MSAISender.m in Sources */,
+				96BEBBC723567FA9006C31CE /* MSAIDevice.m in Sources */,
+				96BEBBBC23567FA9006C31CE /* MSAIApplication.m in Sources */,
+				96BEBC0D235680BF006C31CE /* MSAITelemetryContext.m in Sources */,
+				96BEBBEE23567FB0006C31CE /* ApplicationInsightsPrivate.m in Sources */,
+				96BEBBF423567FB0006C31CE /* MSAIContextHelper.m in Sources */,
+				96BEBBD223567FA9006C31CE /* MSAILocation.m in Sources */,
+				96BEBC0A235680BF006C31CE /* MSAIEnvelopeManager.m in Sources */,
+				96BEBC04235680B9006C31CE /* MSAIPersistence.m in Sources */,
+				96BEBC1D235680CB006C31CE /* MSAIApplicationInsights.m in Sources */,
+				96BEBC12235680C7006C31CE /* MSAIAppClient.m in Sources */,
+				96BEBBE423567FA9006C31CE /* MSAISession.m in Sources */,
+				96BEBBEA23567FA9006C31CE /* MSAITelemetryData.m in Sources */,
+				96BEBBC023567FA9006C31CE /* MSAIData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1E754E431621F6290070AB92 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E8E66AD15BC3D7700632A2E /* ApplicationInsights Documentation */;
-			targetProxy = 1E754E421621F6290070AB92 /* PBXContainerItemProxy */;
-		};
 		1EA116FF16F4D302001C015C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E5954CB15B6F24A00A03429 /* ApplicationInsights */;
@@ -965,24 +1198,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1E4F61EB1621AD970033EFC5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "$(PROJECT_DIR)/../Resources/ApplicationInsights-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.microsoft.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = ApplicationInsights.framework;
-			};
-			name = Debug;
-		};
-		1E4F61EC1621AD970033EFC5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "$(PROJECT_DIR)/../Resources/ApplicationInsights-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.microsoft.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = ApplicationInsights.framework;
-			};
-			name = Release;
-		};
 		1E5954F015B6F24A00A03429 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1150,6 +1365,100 @@
 			};
 			name = Release;
 		};
+		96BEBBB923567F8F006C31CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K6SVRZ3MWM;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "ApplicationInsights Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jpjventures.ApplicationInsights-Framework";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				VERSION_STRING = "1.0-beta.9";
+			};
+			name = Debug;
+		};
+		96BEBBBA23567F8F006C31CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K6SVRZ3MWM;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "ApplicationInsights Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jpjventures.ApplicationInsights-Framework";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				VERSION_STRING = "1.0-beta.9";
+			};
+			name = Release;
+		};
 		E400563C148D79B500EB22B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E66CA9115D4100500F35BED /* buildnumber.xcconfig */;
@@ -1262,15 +1571,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E4F61EA1621AD970033EFC5 /* Build configuration list for PBXAggregateTarget "ApplicationInsights Framework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E4F61EB1621AD970033EFC5 /* Debug */,
-				1E4F61EC1621AD970033EFC5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1E5954EF15B6F24A00A03429 /* Build configuration list for PBXNativeTarget "ApplicationInsights" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1294,6 +1594,15 @@
 			buildConfigurations = (
 				1E8E66AE15BC3D7700632A2E /* Debug */,
 				1E8E66AF15BC3D7700632A2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96BEBBB823567F8F006C31CE /* Build configuration list for PBXNativeTarget "ApplicationInsights Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96BEBBB923567F8F006C31CE /* Debug */,
+				96BEBBBA23567F8F006C31CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

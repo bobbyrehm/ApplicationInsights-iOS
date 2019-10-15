@@ -23,7 +23,6 @@
 
 ///
 /// Adds all members of this class to a dictionary
-/// @param dictionary to which the members of this class will be added.
 ///
 - (MSAIOrderedDictionary *)serializeToDictionary {
   MSAIOrderedDictionary *dict = [super serializeToDictionary];
@@ -54,7 +53,7 @@
 - (void)encodeWithCoder:(NSCoder *)coder {
   [super encodeWithCoder:coder];
   [coder encodeObject:self.message forKey:@"self.message"];
-  [coder encodeInt:self.severityLevel forKey:@"self.severityLevel"];
+  [coder encodeInt64:self.severityLevel forKey:@"self.severityLevel"];
 }
 
 

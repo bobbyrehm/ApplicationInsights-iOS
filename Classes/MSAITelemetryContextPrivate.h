@@ -55,8 +55,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  Initializes a telemetry context.
  *
  *  @param appContext         the context of the app, which contains several meta infos
- *  @param endpointPath       the path to the telemetry endpoint
- *  @param sessionId          the id of the first session
  *
  *  @return the telemetry context
  */

@@ -99,7 +99,7 @@ NSString *const kMSAISessionAcquisitionTime = @"MSAISessionAcquisitionTime";
                   usingBlock:^(NSNotification *notification) {
                     NSDictionary *userInfo = notification.userInfo;
                     MSAISession *session = userInfo[kMSAISessionInfo];
-                    _session = session;
+                    self->_session = session;
                   }];
 }
 
@@ -113,8 +113,8 @@ NSString *const kMSAISessionAcquisitionTime = @"MSAISessionAcquisitionTime";
                   usingBlock:^(NSNotification *note) {
                     NSDictionary *userInfo = note.userInfo;
                     MSAIUser *user = userInfo[kMSAIUserInfo];
-                    if (_user) {
-                      _user = user;
+                    if (self->_user) {
+                        self->_user = user;
                     }
                   }];
   

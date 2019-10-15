@@ -123,7 +123,7 @@ static char *const MSAICommonPropertiesQueue = "com.microsoft.ApplicationInsight
 
 - (void)setCommonProperties:(NSDictionary *)commonProperties {
   dispatch_barrier_async(_commonPropertiesQueue, ^{
-    _commonProperties = commonProperties;
+    self->_commonProperties = commonProperties;
   });
 }
 
@@ -160,7 +160,7 @@ static char *const MSAICommonPropertiesQueue = "com.microsoft.ApplicationInsight
 - (void)trackEventWithName:(NSString *)eventName properties:(NSDictionary *)properties measurements:(NSDictionary *)measurements {
   __weak typeof(self) weakSelf = self;
   dispatch_async(_telemetryEventQueue, ^{
-    if(!_managerInitialised) return;
+    if(!self->_managerInitialised) return;
 
     typeof(self) strongSelf = weakSelf;
     MSAIEventData *eventData = [MSAIEventData new];
@@ -186,7 +186,7 @@ static char *const MSAICommonPropertiesQueue = "com.microsoft.ApplicationInsight
 - (void)trackTraceWithMessage:(NSString *)message properties:(NSDictionary *)properties {
   __weak typeof(self) weakSelf = self;
   dispatch_async(_telemetryEventQueue, ^{
-    if(!_managerInitialised) return;
+    if(!self->_managerInitialised) return;
 
     typeof(self) strongSelf = weakSelf;
     MSAIMessageData *messageData = [MSAIMessageData new];
@@ -211,7 +211,7 @@ static char *const MSAICommonPropertiesQueue = "com.microsoft.ApplicationInsight
 - (void)trackMetricWithName:(NSString *)metricName value:(double)value properties:(NSDictionary *)properties {
   __weak typeof(self) weakSelf = self;
   dispatch_async(_telemetryEventQueue, ^{
-    if(!_managerInitialised) return;
+    if(!self->_managerInitialised) return;
 
     typeof(self) strongSelf = weakSelf;
     MSAIMetricData *metricData = [MSAIMetricData new];
@@ -253,7 +253,7 @@ static char *const MSAICommonPropertiesQueue = "com.microsoft.ApplicationInsight
 
   __weak typeof(self) weakSelf = self;
   dispatch_async(_telemetryEventQueue, ^{
-    if(!_managerInitialised) return;
+    if(!self->_managerInitialised) return;
 
     typeof(self) strongSelf = weakSelf;
     MSAIPageViewData *pageViewData = [MSAIPageViewData new];

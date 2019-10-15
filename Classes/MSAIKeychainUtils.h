@@ -33,7 +33,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface MSAIKeychainUtils : NSObject
 
-+ (NSString *) getPasswordForUsername: (NSString *) username andServiceName: (NSString *) serviceName error: (NSError **) error;
++ (NSString * _Nullable) getPasswordForUsername: (NSString *) username andServiceName: (NSString *) serviceName error: (NSError **) error;
 //uses the default kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
 + (BOOL) storeUsername: (NSString *) username andPassword: (NSString *) password forServiceName: (NSString *) serviceName updateExisting: (BOOL) updateExisting error: (NSError **) error;
 + (BOOL) storeUsername: (NSString *) username andPassword: (NSString *) password forServiceName: (NSString *) serviceName updateExisting: (BOOL) updateExisting accessibility:(CFTypeRef) accessiblity error: (NSError **) error;

@@ -44,7 +44,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  Configures the sender instance.
  *
  *  @param appClient    the app client used for sending the data
- *  @param endpointPath the endpoint url of the telemetry server
  */
 - (void)configureWithAppClient:(MSAIAppClient *)appClient;
 

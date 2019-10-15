@@ -108,7 +108,7 @@ FOUNDATION_EXPORT NSString *const MSAIPersistenceSuccessNotification;
  *
  *  @return an array with all envelope objects.
  */
-- (NSArray *)bundleAtPath:(NSString *)path;
+- (NSArray * _Nullable)bundleAtPath:(NSString *)path;
 
 /**
  *  Return the json data for a given path
@@ -117,7 +117,7 @@ FOUNDATION_EXPORT NSString *const MSAIPersistenceSuccessNotification;
  *
  *  @return a data object which contains telemetry data in json representation
  */
-- (NSData *)dataAtPath:(NSString *)path;
+- (NSData * _Nullable)dataAtPath:(NSString *)path;
 
 ///-----------------------------------------------------------------------------
 /// @name Getting a path

@@ -147,7 +147,7 @@ NSString *msai_osVersionBuild(void) {
     }
     
     errno = saved_errno;
-    return NULL;
+    return @"";
   }
   
   NSString *osBuild = [NSString stringWithCString:result encoding:NSUTF8StringEncoding];

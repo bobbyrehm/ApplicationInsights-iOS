@@ -87,7 +87,7 @@ static void MSAIReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkR
   dispatch_async(self.singletonQueue, ^{
     typeof(self) strongSelf = weakSelf;
     
-    if(_running){
+    if(self->_running){
       return;
     }
     SCNetworkReachabilityContext context = {0, (__bridge void *)(self), NULL, NULL, NULL};
@@ -117,7 +117,7 @@ static void MSAIReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkR
     if (strongSelf->_reachability != NULL){
       SCNetworkReachabilitySetCallback(strongSelf->_reachability, NULL, NULL);
       SCNetworkReachabilitySetDispatchQueue(strongSelf->_reachability, NULL);
-      _running = NO;
+      self->_running = NO;
     }
   });
 }
@@ -129,7 +129,7 @@ static void MSAIReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkR
   dispatch_async(self.singletonQueue, ^{
     typeof(self) strongSelf = weakSelf;
     
-    _reachabilityType = [strongSelf activeReachabilityType];
+    self->_reachabilityType = [strongSelf activeReachabilityType];
     NSDictionary *notificationDict = @{kMSAIReachabilityUserInfoName:[strongSelf descriptionForReachabilityType:strongSelf->_reachabilityType],
                                        kMSAIReachabilityUserInfoType:@(strongSelf->_reachabilityType)};
     dispatch_async(dispatch_get_main_queue(), ^{
