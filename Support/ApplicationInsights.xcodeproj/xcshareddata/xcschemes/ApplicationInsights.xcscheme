@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+   LastUpgradeVersion = "1110"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -45,6 +46,15 @@
             </ActionContent>
          </ExecutionAction>
       </PostActions>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1E5954CB15B6F24A00A03429"
+            BuildableName = "libApplicationInsights.a"
+            BlueprintName = "ApplicationInsights"
+            ReferencedContainer = "container:ApplicationInsights.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -57,17 +67,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1E5954CB15B6F24A00A03429"
-            BuildableName = "libApplicationInsights.a"
-            BlueprintName = "ApplicationInsights"
-            ReferencedContainer = "container:ApplicationInsights.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -88,8 +87,6 @@
             ReferencedContainer = "container:ApplicationInsights.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
