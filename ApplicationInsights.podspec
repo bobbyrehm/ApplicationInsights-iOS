@@ -22,5 +22,5 @@ Pod::Spec.new do |s|
   s.libraries       = 'z', 'c++'
 
   s.preserve_path   = 'README.md'
-  s.info_plist = { "MSAISDKVersion" => s.version.to_s }
+  s.info_plist = { 'MSAISDKVersion' => 's.version.to_s' }
 end
