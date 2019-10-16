@@ -182,11 +182,11 @@ NSString *msai_screenSize(void){
 }
 
 NSString *msai_sdkVersion(void){
-  return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+  return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"MSAISDKVersion"];
 }
 
 NSString *msai_sdkBuild(void) {
-  return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+  return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"MSAISDKBuild"];
 }
 
 NSString *msai_devicePlatform(void) {
