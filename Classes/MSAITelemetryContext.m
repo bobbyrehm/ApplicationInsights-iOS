@@ -8,6 +8,7 @@
 #import "MSAIReachability.h"
 #import "MSAIReachabilityPrivate.h"
 #import "MSAIOrderedDictionary.h"
+#import "Constants.h"
 
 NSString *const kMSAITelemetrySessionId = @"MSAITelemetrySessionId";
 NSString *const kMSAISessionAcquisitionTime = @"MSAISessionAcquisitionTime";
@@ -34,6 +35,7 @@ NSString *const kMSAISessionAcquisitionTime = @"MSAISessionAcquisitionTime";
     deviceContext.oemName = @"Apple";
     
     MSAIInternal *internalContext = [MSAIInternal new];
+    internalContext.sdkVersion = kSDKVersion;
     
     MSAIApplication *applicationContext = [MSAIApplication new];
     applicationContext.version = appContext.appVersion;

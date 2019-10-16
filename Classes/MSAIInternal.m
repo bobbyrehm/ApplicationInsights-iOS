@@ -10,8 +10,9 @@
 ///
 - (MSAIOrderedDictionary *)serializeToDictionary {
   MSAIOrderedDictionary *dict = [super serializeToDictionary];
-  [dict setObject:kSDKVersion forKey:@"ai.internal.sdkVersion"];
-  
+  if (self.sdkVersion != nil) {
+      [dict setObject:self.sdkVersion forKey:@"ai.internal.sdkVersion"];
+  }
   if (self.agentVersion != nil) {
     [dict setObject:self.agentVersion forKey:@"ai.internal.agentVersion"];
   }
@@ -23,6 +24,7 @@
 - (instancetype)initWithCoder:(NSCoder *)coder {
   self = [super init];
   if(self) {
+    _sdkVersion = [coder decodeObjectForKey:@"self.sdkVersion"];
     _agentVersion = [coder decodeObjectForKey:@"self.agentVersion"];
   }
 
@@ -30,6 +32,7 @@
 }
 
 - (void)encodeWithCoder:(NSCoder *)coder {
+  [coder encodeObject:self.sdkVersion forKey:@"self.sdkVersion"];
   [coder encodeObject:self.agentVersion forKey:@"self.agentVersion"];
 }
 
