@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "ApplicationInsights"
   s.deprecated       = true
-  s.version          = "1.0-beta.9"
+  s.version          = "1.0-beta.9" # Note: To update the sdk version that appears in the AppInsights event data, you will also need to update the version constant found in MSAIHelper.m:185
   s.summary          = "Microsoft Application Insights SDK for iOS"
   s.description      = <<-DESC
                        Application Insights is a service that allows developers to keep their applications available, performant, and successful.
@@ -22,5 +22,4 @@ Pod::Spec.new do |s|
   s.libraries       = 'z', 'c++'
 
   s.preserve_path   = 'README.md'
-  s.info_plist = { 'MSAISDKVersion' => 's.version.to_s' }
 end
