@@ -22,4 +22,5 @@ Pod::Spec.new do |s|
   s.libraries       = 'z', 'c++'
 
   s.preserve_path   = 'README.md'
+  s.info_plist = { "INFOPLIST_FILE" => "ApplicationInsights Framework/Info.plist" }
 end
