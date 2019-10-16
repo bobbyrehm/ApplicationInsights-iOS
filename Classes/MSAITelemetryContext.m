@@ -8,7 +8,6 @@
 #import "MSAIReachability.h"
 #import "MSAIReachabilityPrivate.h"
 #import "MSAIOrderedDictionary.h"
-#import "Constants.h"
 
 NSString *const kMSAITelemetrySessionId = @"MSAITelemetrySessionId";
 NSString *const kMSAISessionAcquisitionTime = @"MSAISessionAcquisitionTime";
@@ -140,7 +139,6 @@ NSString *const kMSAISessionAcquisitionTime = @"MSAISessionAcquisitionTime";
     [_tags addEntriesFromDictionary:[self.location serializeToDictionary]];
     [_tags addEntriesFromDictionary:[self.internal serializeToDictionary]];
     [_tags addEntriesFromDictionary:[self.operation serializeToDictionary]];
-    [_tags addEntriesFromDictionary:@{@"ai.internal.sdkVersion": kSDKVersion}];
   }
   return _tags;
 }
