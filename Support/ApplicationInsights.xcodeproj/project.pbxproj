@@ -260,6 +260,8 @@
 		96BEBC1D235680CB006C31CE /* MSAIApplicationInsights.m in Sources */ = {isa = PBXBuildFile; fileRef = E41EB466148D7BF50015DEDC /* MSAIApplicationInsights.m */; };
 		96BEBC1E235681A8006C31CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B85606E1A7A6A9D00A54FB7 /* UIKit.framework */; platformFilter = ios; };
 		96BEBC20235681B0006C31CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BEBC1F235681B0006C31CE /* Foundation.framework */; platformFilter = ios; };
+		96BEBC242357C6A1006C31CE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BEBC232357C6A1006C31CE /* Constants.m */; };
+		96BEBC262357C768006C31CE /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 96BEBC252357C708006C31CE /* Constants.h */; };
 		E40E0B0D17DA1AFF005E38C1 /* MSAIAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E40E0B0B17DA1AFF005E38C1 /* MSAIAppClient.m */; };
 		E4933E8017B66CDA00B11ACC /* MSAIHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E4933E7E17B66CDA00B11ACC /* MSAIHTTPOperation.h */; };
 		E4933E8117B66CDA00B11ACC /* MSAIHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4933E7F17B66CDA00B11ACC /* MSAIHTTPOperation.m */; };
@@ -433,6 +435,8 @@
 		96BEBBB523567F8F006C31CE /* ApplicationInsights_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationInsights_Framework.h; sourceTree = "<group>"; };
 		96BEBBB623567F8F006C31CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96BEBC1F235681B0006C31CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		96BEBC232357C6A1006C31CE /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		96BEBC252357C708006C31CE /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E400561D148D79B500EB22B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E40E0B0A17DA1AFF005E38C1 /* MSAIAppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAIAppClient.h; sourceTree = "<group>"; };
 		E40E0B0B17DA1AFF005E38C1 /* MSAIAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAIAppClient.m; sourceTree = "<group>"; };
@@ -753,6 +757,8 @@
 				E41EB465148D7BF50015DEDC /* MSAIApplicationInsights.h */,
 				80F334B11A9C93290098026F /* MSAIApplicationInsightsPrivate.h */,
 				E41EB466148D7BF50015DEDC /* MSAIApplicationInsights.m */,
+				96BEBC252357C708006C31CE /* Constants.h */,
+				96BEBC232357C6A1006C31CE /* Constants.m */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -883,6 +889,7 @@
 				96BEBC13235680C7006C31CE /* MSAISender.h in Headers */,
 				96BEBBC323567FA9006C31CE /* MSAIDataPointType.h in Headers */,
 				96BEBBBD23567FA9006C31CE /* MSAIBase.h in Headers */,
+				96BEBC262357C768006C31CE /* Constants.h in Headers */,
 				96BEBBC523567FA9006C31CE /* MSAIDependencySourceType.h in Headers */,
 				96BEBBEB23567FA9006C31CE /* MSAIUser.h in Headers */,
 				96BEBC11235680C7006C31CE /* MSAIAppClient.h in Headers */,
@@ -1178,6 +1185,7 @@
 				96BEBC0A235680BF006C31CE /* MSAIEnvelopeManager.m in Sources */,
 				96BEBC04235680B9006C31CE /* MSAIPersistence.m in Sources */,
 				96BEBC1D235680CB006C31CE /* MSAIApplicationInsights.m in Sources */,
+				96BEBC242357C6A1006C31CE /* Constants.m in Sources */,
 				96BEBC12235680C7006C31CE /* MSAIAppClient.m in Sources */,
 				96BEBBE423567FA9006C31CE /* MSAISession.m in Sources */,
 				96BEBBEA23567FA9006C31CE /* MSAITelemetryData.m in Sources */,

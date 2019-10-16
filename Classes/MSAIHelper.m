@@ -181,14 +181,6 @@ NSString *msai_screenSize(void){
   return [NSString stringWithFormat:@"%dx%d",(int)(screenSize.height * scale), (int)(screenSize.width * scale)];
 }
 
-NSString *msai_sdkVersion(void){
-  return @"ios:1.0-beta.9";
-}
-
-NSString *msai_sdkBuild(void) {
-  return @"12";
-}
-
 NSString *msai_devicePlatform(void) {
   
   size_t size;

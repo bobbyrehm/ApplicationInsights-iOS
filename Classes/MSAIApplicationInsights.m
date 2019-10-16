@@ -17,6 +17,7 @@
 #import "MSAIContextHelperPrivate.h"
 #include <stdint.h>
 #import "MSAICategoryContainer.h"
+#import "Constants.h"
 
 #if MSAI_FEATURE_TELEMETRY
 #import "MSAITelemetryManager.h"
@@ -237,7 +238,7 @@ NSString *const kMSAIInstrumentationKey = @"MSAIInstrumentationKey";
 #pragma mark - SDK meta data
 
 - (NSString *)version {
-  return msai_sdkVersion();
+  return kSDKVersion;
 }
 
 + (NSString *)version {
@@ -245,7 +246,7 @@ NSString *const kMSAIInstrumentationKey = @"MSAIInstrumentationKey";
 }
 
 - (NSString *)build {
-  return msai_sdkBuild();
+  return kSDKBuild;
 }
 
 + (NSString *)build {

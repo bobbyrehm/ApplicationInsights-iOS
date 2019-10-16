@@ -34,7 +34,6 @@ NSString *const kMSAISessionAcquisitionTime = @"MSAISessionAcquisitionTime";
     deviceContext.oemName = @"Apple";
     
     MSAIInternal *internalContext = [MSAIInternal new];
-    internalContext.sdkVersion = msai_sdkVersion();
     
     MSAIApplication *applicationContext = [MSAIApplication new];
     applicationContext.version = appContext.appVersion;
